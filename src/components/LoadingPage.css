@@ -1,0 +1,54 @@
+.loading-page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.loading-content {
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.loading-title {
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.loading-bar-container {
+  width: 300px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.loading-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b9d, #ff1493);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px #ff1493;
+}
+
+.loading-percentage {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.loading-message {
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

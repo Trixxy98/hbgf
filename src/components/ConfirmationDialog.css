@@ -1,0 +1,83 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.dialog {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: dialogAppear 0.3s ease-out;
+  min-width: 300px;
+}
+
+.dialog h3 {
+  color: #ff1493;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.dialog p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+}
+
+.yes-button, .no-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.yes-button {
+  background: linear-gradient(135deg, #ff6b9d, #ff1493);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.yes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 107, 157, 0.6);
+}
+
+.no-button {
+  background: #f0f0f0;
+  color: #666;
+  position: relative;
+  transition: transform 0.1s ease;
+}
+
+.no-button:hover {
+  background: #e0e0e0;
+}
+
+@keyframes dialogAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
